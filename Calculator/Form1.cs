@@ -349,6 +349,7 @@ namespace Calculator
                     Convert.ToDouble(res);
                     res = res * Convert.ToDouble(p);
                     lblDisp.Text = res.ToString();
+                    p = "";
                 }
             }
             else
