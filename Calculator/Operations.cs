@@ -8,5 +8,7 @@ namespace Calculator
 {
     class Operations
     {
+        
+        
     }
 }

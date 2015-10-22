@@ -12,14 +12,85 @@ namespace Calculator
 {
     public partial class Form1 : Form
     {
-
         string a;
         string p;
         int res = 0;
-        bool plus = false;
-        bool minus = false;
-        bool del = false;
-        bool umn = false;
+        bool plus;
+        bool minus;
+        bool del;
+        bool umn;
+
+        public void Plus(int res, string p)
+        {
+            if (res == 0)
+            {
+                res = 0 + (Convert.ToInt32(p));
+                lblDisp.Text = res.ToString();
+                p = "";
+            }
+            else
+            {
+                Convert.ToInt32(res);
+                p.ToString();
+                res = res + (Convert.ToInt32(p));
+                lblDisp.Text = res.ToString();
+                p = "";
+            }
+        }
+
+        public void Minus(int res, string p)
+        {
+            if (res == 0)
+            {
+                res = 0 + (Convert.ToInt32(p));
+                lblDisp.Text = res.ToString();
+                p = "";
+            }
+            else
+            {
+                Convert.ToInt32(res);
+                p.ToString();
+                res = res - Convert.ToInt32(p);
+                lblDisp.Text = res.ToString();
+                p = "";
+            }
+        }
+
+        public void Del(int res, string p)
+        {
+            if (res == 0)
+            {
+                res = 0 + (Convert.ToInt32(p));
+                lblDisp.Text = res.ToString();
+                p = "";
+            }
+            else
+            {
+                Convert.ToInt32(res);
+                p.ToString();
+                res = res * (Convert.ToInt32(p));
+                lblDisp.Text = res.ToString();
+                p = "";
+            }
+        }
+
+        public void Mult(int res, string p)
+        {
+            if (res == 0)
+            {
+                res = 0 + (Convert.ToInt32(p));
+                lblDisp.Text = res.ToString();
+                p = "";
+            }
+            else
+            {
+                Convert.ToInt32(res);
+                p.ToString();
+                res = res / (Convert.ToInt32(p));
+                lblDisp.Text = res.ToString();
+                p = "";
+            }
+        }
 
         public Form1()
         {
@@ -156,35 +227,129 @@ namespace Calculator
 
         private void btnPlus_Click(object sender, EventArgs e)
         {
-            if (res == 0)
+            if (plus == true)
             {
-                res = 0 + Convert.ToInt32(p);
-                lblDisp.Text = res.ToString();
-                p = "";
+                Plus(res, p);
+            }
+            else if (minus == true)
+            {
+                Minus(res, p);
+            }
+            else if (del == true)
+            {
+                Del(res, p);
+            }
+            else if (umn == true)
+            {
+                Mult(res, p);
             }
             else
             {
-                Convert.ToInt32(res);
-                res = res + Convert.ToInt32(p);
-                lblDisp.Text = res.ToString();
-                p = "";
+                plus = true;
+                minus = false;
+                del = false;
+                umn = false;
             }
         }
 
         private void btnMinus_Click(object sender, EventArgs e)
         {
-            if (res == 0)
+            if (plus == true)
             {
-                res = 0 + Convert.ToInt32(p);
-                lblDisp.Text = res.ToString();
-                p = "";
+                Plus(res, p);
+            }
+            else if (minus == true)
+            {
+                Minus(res, p);
+            }
+            else if (del == true)
+            {
+                Del(res, p);
+            }
+            else if (umn == true)
+            {
+                Mult(res, p);
             }
             else
             {
-                Convert.ToInt32(res);
-                res = res - Convert.ToInt32(p);
-                lblDisp.Text = res.ToString();
-                p = "";
+                minus = true;
+                plus = false;
+                umn = false;
+                del = false;
+            }
+        }
+
+        private void btnMult_Click(object sender, EventArgs e)
+        {
+            if (plus == true)
+            {
+                Plus(res, p);
+            }
+            else if (minus == true)
+            {
+                Minus(res, p);
+            }
+            else if (del == true)
+            {
+                Del(res, p);
+            }
+            else if (umn == true)
+            {
+                Mult(res, p);
+            }
+            else
+            {
+                umn = true;
+                plus = false;
+                minus = false;
+                del = false;
+            }
+        }
+
+        private void btnDemul_Click(object sender, EventArgs e)
+        {
+            if (plus == true)
+            {
+                Plus(res, p);
+            }
+            else if (minus == true)
+            {
+                Minus(res, p);
+            }
+            else if (del == true)
+            {
+                Del(res, p);
+            }
+            else if (umn == true)
+            {
+                Mult(res, p);
+            }
+            else
+            {
+                del = true;
+                plus = false;
+                minus = false;
+                umn = false;
+            }
+        }
+
+        private void btnResult_Click(object sender, EventArgs e)
+        {
+            if (plus == true)
+            {
+                Plus(res, p);
+            }
+            else if (minus == true)
+            {
+                Minus(res, p);
+            }
+            else if (del == true)
+            {
+                Del(res, p);
+            }
+            else if (umn == true)
+            {
+                Mult(res, p);
             }
         }
     }

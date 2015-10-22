@@ -145,6 +145,7 @@
             this.btnMult.TabIndex = 11;
             this.btnMult.Text = "*";
             this.btnMult.UseVisualStyleBackColor = true;
+            this.btnMult.Click += new System.EventHandler(this.btnMult_Click);
             // 
             // btnDemul
             // 
@@ -155,6 +156,7 @@
             this.btnDemul.TabIndex = 10;
             this.btnDemul.Text = "/";
             this.btnDemul.UseVisualStyleBackColor = true;
+            this.btnDemul.Click += new System.EventHandler(this.btnDemul_Click);
             // 
             // btnNine
             // 
@@ -219,6 +221,7 @@
             this.btnResult.TabIndex = 15;
             this.btnResult.Text = "=";
             this.btnResult.UseVisualStyleBackColor = true;
+            this.btnResult.Click += new System.EventHandler(this.btnResult_Click);
             // 
             // lblDisp
             // 
