@@ -14,82 +14,82 @@ namespace Calculator
     {
         string a;
         string p;
-        int res = 0;
+        double res = 0;
         bool plus;
         bool minus;
         bool del;
         bool umn;
 
-        public void Plus(int res, string p)
+        private void Plus(double b, string t)
         {
+            b = res;
+            t = p;
             if (res == 0)
             {
-                res = 0 + (Convert.ToInt32(p));
+                res = 0 + Convert.ToDouble(p);
                 lblDisp.Text = res.ToString();
-                p = "";
             }
             else
             {
-                Convert.ToInt32(res);
-                p.ToString();
-                res = res + (Convert.ToInt32(p));
+                Convert.ToDouble(res);
+                res = res + Convert.ToDouble(p);
                 lblDisp.Text = res.ToString();
-                p = "";
             }
+            p = "";
         }
 
-        public void Minus(int res, string p)
+        private void Minus(double b, string t)
         {
+            b = res;
+            t = p;
             if (res == 0)
             {
-                res = 0 + (Convert.ToInt32(p));
+                res = 0 + Convert.ToDouble(p);
                 lblDisp.Text = res.ToString();
-                p = "";
             }
             else
             {
-                Convert.ToInt32(res);
-                p.ToString();
-                res = res - Convert.ToInt32(p);
+                Convert.ToDouble(res);
+                res = res - Convert.ToDouble(p);
                 lblDisp.Text = res.ToString();
-                p = "";
             }
+            p = "";
         }
 
-        public void Del(int res, string p)
+        private void Del(double b, string t)
         {
+            b = res;
+            t = p;
             if (res == 0)
             {
-                res = 0 + (Convert.ToInt32(p));
+                res = 0 + Convert.ToDouble(p);
                 lblDisp.Text = res.ToString();
-                p = "";
             }
             else
             {
-                Convert.ToInt32(res);
-                p.ToString();
-                res = res * (Convert.ToInt32(p));
+                Convert.ToDouble(res);
+                res = res * Convert.ToDouble(p);
                 lblDisp.Text = res.ToString();
-                p = "";
             }
+            p = "";
         }
 
-        public void Mult(int res, string p)
+        private void Mult(double b, string t)
         {
+            b = res;
+            t = p;
             if (res == 0)
             {
-                res = 0 + (Convert.ToInt32(p));
+                res = 0 + Convert.ToDouble(p);
                 lblDisp.Text = res.ToString();
-                p = "";
             }
             else
             {
-                Convert.ToInt32(res);
-                p.ToString();
-                res = res / (Convert.ToInt32(p));
+                Convert.ToDouble(res);
+                res = res / Convert.ToDouble(p);
                 lblDisp.Text = res.ToString();
-                p = "";
             }
+            p = "";
         }
 
         public Form1()
@@ -229,22 +229,63 @@ namespace Calculator
         {
             if (plus == true)
             {
-                Plus(res, p);
+                if (res == 0)
+                {
+                    res = 0 + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
+                else
+                {
+                    Convert.ToDouble(res);
+                    res = res + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
             }
             else if (minus == true)
             {
-                Minus(res, p);
+                if (res == 0)
+                {
+                    res = 0 + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
+                else
+                {
+                    Convert.ToDouble(res);
+                    res = res - Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
             }
             else if (del == true)
             {
-                Del(res, p);
+                if (res == 0)
+                {
+                    res = 0 + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
+                else
+                {
+                    Convert.ToDouble(res);
+                    res = res / Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
             }
             else if (umn == true)
             {
-                Mult(res, p);
+                if (res == 0)
+                {
+                    res = 0 + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
+                else
+                {
+                    Convert.ToDouble(res);
+                    res = res * Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
             }
             else
             {
+                p = "";
                 plus = true;
                 minus = false;
                 del = false;
@@ -256,19 +297,59 @@ namespace Calculator
         {
             if (plus == true)
             {
-                Plus(res, p);
+                if (res == 0)
+                {
+                    res = 0 + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
+                else
+                {
+                    Convert.ToDouble(res);
+                    res = res + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
             }
             else if (minus == true)
             {
-                Minus(res, p);
+                if (res == 0)
+                {
+                    res = 0 + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
+                else
+                {
+                    Convert.ToDouble(res);
+                    res = res - Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
             }
             else if (del == true)
             {
-                Del(res, p);
+                if (res == 0)
+                {
+                    res = 0 + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
+                else
+                {
+                    Convert.ToDouble(res);
+                    res = res / Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
             }
             else if (umn == true)
             {
-                Mult(res, p);
+                if (res == 0)
+                {
+                    res = 0 + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
+                else
+                {
+                    Convert.ToDouble(res);
+                    res = res * Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
             }
             else
             {
@@ -276,6 +357,7 @@ namespace Calculator
                 plus = false;
                 umn = false;
                 del = false;
+                p = "";
             }
         }
 
@@ -283,19 +365,59 @@ namespace Calculator
         {
             if (plus == true)
             {
-                Plus(res, p);
+                if (res == 0)
+                {
+                    res = 0 + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
+                else
+                {
+                    Convert.ToDouble(res);
+                    res = res + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
             }
             else if (minus == true)
             {
-                Minus(res, p);
+                if (res == 0)
+                {
+                    res = 0 + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
+                else
+                {
+                    Convert.ToDouble(res);
+                    res = res - Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
             }
             else if (del == true)
             {
-                Del(res, p);
+                if (res == 0)
+                {
+                    res = 0 + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
+                else
+                {
+                    Convert.ToDouble(res);
+                    res = res / Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
             }
             else if (umn == true)
             {
-                Mult(res, p);
+                if (res == 0)
+                {
+                    res = 0 + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
+                else
+                {
+                    Convert.ToDouble(res);
+                    res = res * Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
             }
             else
             {
@@ -303,6 +425,7 @@ namespace Calculator
                 plus = false;
                 minus = false;
                 del = false;
+                p = "";
             }
         }
 
@@ -310,19 +433,59 @@ namespace Calculator
         {
             if (plus == true)
             {
-                Plus(res, p);
+                if (res == 0)
+                {
+                    res = 0 + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
+                else
+                {
+                    Convert.ToDouble(res);
+                    res = res + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
             }
             else if (minus == true)
             {
-                Minus(res, p);
+                if (res == 0)
+                {
+                    res = 0 + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
+                else
+                {
+                    Convert.ToDouble(res);
+                    res = res - Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
             }
             else if (del == true)
             {
-                Del(res, p);
+                if (res == 0)
+                {
+                    res = 0 + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
+                else
+                {
+                    Convert.ToDouble(res);
+                    res = res / Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
             }
             else if (umn == true)
             {
-                Mult(res, p);
+                if (res == 0)
+                {
+                    res = 0 + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
+                else
+                {
+                    Convert.ToDouble(res);
+                    res = res * Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
             }
             else
             {
@@ -330,6 +493,7 @@ namespace Calculator
                 plus = false;
                 minus = false;
                 umn = false;
+                p = "";
             }
         }
 
@@ -337,20 +501,62 @@ namespace Calculator
         {
             if (plus == true)
             {
-                Plus(res, p);
+                if (res == 0)
+                {
+                    res = 0 + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
+                else
+                {
+                    Convert.ToDouble(res);
+                    res = res + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
             }
             else if (minus == true)
             {
-                Minus(res, p);
+                if (res == 0)
+                {
+                    res = 0 + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
+                else
+                {
+                    Convert.ToDouble(res);
+                    res = res - Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
             }
             else if (del == true)
             {
-                Del(res, p);
+                if (res == 0)
+                {
+                    res = 0 + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
+                else
+                {
+                    Convert.ToDouble(res);
+                    res = res / Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
             }
             else if (umn == true)
             {
-                Mult(res, p);
+                if (res == 0)
+                {
+                    res = 0 + Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
+                else
+                {
+                    Convert.ToDouble(res);
+                    res = res * Convert.ToDouble(p);
+                    lblDisp.Text = res.ToString();
+                }
             }
+            p = "";
+            lblDisp.Text = Convert.ToString(res);
         }
     }
 }
