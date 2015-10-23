@@ -229,9 +229,10 @@
             this.lblDisp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
             this.lblDisp.Location = new System.Drawing.Point(12, 28);
             this.lblDisp.Name = "lblDisp";
-            this.lblDisp.RightToLeft = System.Windows.Forms.RightToLeft.Yes;
+            this.lblDisp.RightToLeft = System.Windows.Forms.RightToLeft.No;
             this.lblDisp.Size = new System.Drawing.Size(224, 22);
             this.lblDisp.TabIndex = 16;
+            this.lblDisp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
             // btnClear
             // 
