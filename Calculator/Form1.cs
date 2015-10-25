@@ -499,5 +499,15 @@ namespace Calculator
                 lblMod.Text = "";
             }
         }
+
+        private void tsmiAbout_Click(object sender, EventArgs e)
+        {
+            MessageBox.Show("Данный калькулятор создан специально для Вероники Шмидт", "Калькулятор");
+        }
+
+        private void tsmiExit_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
