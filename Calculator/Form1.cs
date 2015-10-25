@@ -21,6 +21,8 @@ namespace Calculator
         bool minus;
         bool del;
         bool umn;
+        bool zap = true;
+        double m;
 
 
         public Form1()
@@ -32,19 +34,9 @@ namespace Calculator
         {
             if (p == "")
             {
-                a = "1";
-                p = p + a;
-                if (lblDisp.Text == "0")
-                {
-                    p = a;
-                }
-                lblDisp.Text = p.ToString();
+                lblMod.Text = "";
             }
-        }
-
-        private void btnTwo_Click(object sender, EventArgs e)
-        {
-            a = "2";
+            a = "1";
             p = p + a;
             if (lblDisp.Text == "0")
             {
@@ -53,9 +45,28 @@ namespace Calculator
             lblDisp.Text = p.ToString();
         }
 
+    private void btnTwo_Click(object sender, EventArgs e)
+    {
+        if (p == "")
+        {
+            lblMod.Text = "";
+        }
+        a = "2";
+        p = p + a;
+        if (lblDisp.Text == "0")
+        {
+            p = a;
+        }
+        lblDisp.Text = p.ToString();
+    }
+
         private void btnThree_Click(object sender, EventArgs e)
         {
-            a = "3";
+        if (p == "")
+        {
+            lblMod.Text = "";
+        }
+        a = "3";
             p = p + a;
             if (lblDisp.Text == "0")
             {
@@ -66,7 +77,11 @@ namespace Calculator
 
         private void btnFour_Click(object sender, EventArgs e)
         {
-            a = "4";
+        if (p == "")
+        {
+            lblMod.Text = "";
+        }
+        a = "4";
             p = p + a;
             if (lblDisp.Text == "0")
             {
@@ -77,7 +92,11 @@ namespace Calculator
 
         private void btnFive_Click(object sender, EventArgs e)
         {
-            a = "5";
+        if (p == "")
+        {
+            lblMod.Text = "";
+        }
+        a = "5";
             p = p + a;
             if (lblDisp.Text == "0")
             {
@@ -88,7 +107,11 @@ namespace Calculator
 
         private void btnSix_Click(object sender, EventArgs e)
         {
-            a = "6";
+        if (p == "")
+        {
+            lblMod.Text = "";
+        }
+        a = "6";
             p = p + a;
             if (lblDisp.Text == "0")
             {
@@ -99,7 +122,11 @@ namespace Calculator
 
         private void btnSeven_Click(object sender, EventArgs e)
         {
-            a = "7";
+        if (p == "")
+        {
+            lblMod.Text = "";
+        }
+        a = "7";
             p = p + a;
             if (lblDisp.Text == "0")
             {
@@ -110,7 +137,11 @@ namespace Calculator
 
         private void btnEight_Click(object sender, EventArgs e)
         {
-            a = "8";
+        if (p == "")
+        {
+            lblMod.Text = "";
+        }
+        a = "8";
             p = p + a;
             if (lblDisp.Text == "0")
             {
@@ -121,7 +152,11 @@ namespace Calculator
 
         private void btnNine_Click(object sender, EventArgs e)
         {
-            a = "9";
+        if (p == "")
+        {
+            lblMod.Text = "";
+        }
+        a = "9";
             p = p + a;
             if (lblDisp.Text == "0")
             {
@@ -132,7 +167,11 @@ namespace Calculator
 
         private void btnNull_Click(object sender, EventArgs e)
         {
-            int i = 0;
+        if (p == "")
+        {
+            lblMod.Text = "";
+        }
+        int i = 0;
             while (lblDisp.Text == "0")
             {
                 lblDisp.Text = "0";
@@ -158,6 +197,7 @@ namespace Calculator
             p = "";
             c = "";
             d = "";
+            zap = true;
             res = 0;
         }
 
@@ -211,6 +251,7 @@ namespace Calculator
                 minus = false;
                 del = false;
                 umn = false;
+                zap = true;
             }
         }
 
@@ -262,6 +303,7 @@ namespace Calculator
                 plus = false;
                 umn = false;
                 del = false;
+                zap = true;
                 p = "";
                 d = "";
             }
@@ -315,6 +357,7 @@ namespace Calculator
                 plus = false;
                 minus = false;
                 del = false;
+                zap = true;
                 p = "";
                 d = "";
             }
@@ -368,6 +411,7 @@ namespace Calculator
                 plus = false;
                 minus = false;
                 umn = false;
+                zap = true;
                 p = "";
                 d = "";
             }
@@ -420,9 +464,40 @@ namespace Calculator
             plus = false;
             minus = false;
             umn = false;
+            zap = true;
             p = Convert.ToString(res);
             c = "";
             d = "";
+        }
+
+        private void btnDot_Click(object sender, EventArgs e)
+        {
+            if (zap == true)
+            {
+                if (p == "")
+                {
+                    p = "0.";
+                }
+                else
+                {
+                    p = p + ".";
+                }
+                zap = false;
+            }
+        }
+
+        private void btnMod_Click(object sender, EventArgs e)
+        {
+            m = Convert.ToDouble(p);
+            p = Convert.ToString(m * -1);
+            if (Convert.ToDouble(p) < 0)
+            {
+                lblMod.Text = "-";
+            }
+            else
+            {
+                lblMod.Text = "";
+            }
         }
     }
 }

@@ -46,6 +46,8 @@
             this.btnResult = new System.Windows.Forms.Button();
             this.lblDisp = new System.Windows.Forms.Label();
             this.btnClear = new System.Windows.Forms.Button();
+            this.btnMod = new System.Windows.Forms.Button();
+            this.lblMod = new System.Windows.Forms.Label();
             this.SuspendLayout();
             // 
             // btnOne
@@ -211,6 +213,7 @@
             this.btnDot.TabIndex = 13;
             this.btnDot.Text = ".";
             this.btnDot.UseVisualStyleBackColor = true;
+            this.btnDot.Click += new System.EventHandler(this.btnDot_Click);
             // 
             // btnResult
             // 
@@ -227,10 +230,10 @@
             // 
             this.lblDisp.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
             this.lblDisp.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.lblDisp.Location = new System.Drawing.Point(12, 28);
+            this.lblDisp.Location = new System.Drawing.Point(29, 28);
             this.lblDisp.Name = "lblDisp";
             this.lblDisp.RightToLeft = System.Windows.Forms.RightToLeft.No;
-            this.lblDisp.Size = new System.Drawing.Size(224, 22);
+            this.lblDisp.Size = new System.Drawing.Size(207, 22);
             this.lblDisp.TabIndex = 16;
             this.lblDisp.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             // 
@@ -245,12 +248,36 @@
             this.btnClear.UseVisualStyleBackColor = true;
             this.btnClear.Click += new System.EventHandler(this.btnClear_Click);
             // 
+            // btnMod
+            // 
+            this.btnMod.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.btnMod.Location = new System.Drawing.Point(196, 99);
+            this.btnMod.Name = "btnMod";
+            this.btnMod.Size = new System.Drawing.Size(40, 40);
+            this.btnMod.TabIndex = 18;
+            this.btnMod.Text = "±";
+            this.btnMod.UseVisualStyleBackColor = true;
+            this.btnMod.Click += new System.EventHandler(this.btnMod_Click);
+            // 
+            // lblMod
+            // 
+            this.lblMod.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(224)))), ((int)(((byte)(224)))), ((int)(((byte)(224)))));
+            this.lblMod.Font = new System.Drawing.Font("Times New Roman", 12F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.lblMod.Location = new System.Drawing.Point(12, 28);
+            this.lblMod.Name = "lblMod";
+            this.lblMod.RightToLeft = System.Windows.Forms.RightToLeft.No;
+            this.lblMod.Size = new System.Drawing.Size(17, 22);
+            this.lblMod.TabIndex = 19;
+            this.lblMod.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.SystemColors.Window;
             this.ClientSize = new System.Drawing.Size(250, 247);
+            this.Controls.Add(this.lblMod);
+            this.Controls.Add(this.btnMod);
             this.Controls.Add(this.btnClear);
             this.Controls.Add(this.lblDisp);
             this.Controls.Add(this.btnResult);
@@ -295,6 +322,8 @@
         private System.Windows.Forms.Button btnResult;
         private System.Windows.Forms.Label lblDisp;
         private System.Windows.Forms.Button btnClear;
+        private System.Windows.Forms.Button btnMod;
+        private System.Windows.Forms.Label lblMod;
     }
 }
 
