@@ -223,6 +223,7 @@ namespace Calculator
                 p = "";
                 c = Convert.ToString(res);
                 d = "";
+                plus = false;
 
             }
             else if (minus == true)
@@ -233,6 +234,7 @@ namespace Calculator
                 p = "";
                 c = Convert.ToString(res);
                 d = "";
+                minus = false;
             }
             else if (del == true)
             {
@@ -242,6 +244,7 @@ namespace Calculator
                 p = "";
                 c = Convert.ToString(res);
                 d = "";
+                del = false;
             }
             else if (umn == true)
             {
@@ -251,6 +254,7 @@ namespace Calculator
                 p = "";
                 c = Convert.ToString(res);
                 d = "";
+                umn = false;
             }
             else if (plus == false && minus == false && del == false && umn == false)
             {
@@ -288,6 +292,8 @@ namespace Calculator
                 p = "";
                 c = Convert.ToString(res);
                 d = "";
+                plus = false;
+
             }
             else if (minus == true)
             {
@@ -307,6 +313,7 @@ namespace Calculator
                 p = "";
                 c = Convert.ToString(res);
                 d = "";
+                del = false;
             }
             else if (umn == true)
             {
@@ -316,6 +323,7 @@ namespace Calculator
                 p = "";
                 c = Convert.ToString(res);
                 d = "";
+                umn = false;
             }
             else if (plus == false && minus == false && del == false && umn == false)
             {
@@ -353,6 +361,8 @@ namespace Calculator
                 p = "";
                 c = Convert.ToString(res);
                 d = "";
+                plus = false;
+
             }
             else if (minus == true)
             {
@@ -362,6 +372,7 @@ namespace Calculator
                 p = "";
                 c = Convert.ToString(res);
                 d = "";
+                minus = false;
             }
             else if (del == true)
             {
@@ -371,6 +382,7 @@ namespace Calculator
                 p = "";
                 c = Convert.ToString(res);
                 d = "";
+                del = false;
             }
             else if (umn == true)
             {
@@ -418,6 +430,8 @@ namespace Calculator
                 p = "";
                 c = Convert.ToString(res);
                 d = "";
+                plus = false;
+
             }
             else if (minus == true)
             {
@@ -427,6 +441,7 @@ namespace Calculator
                 p = "";
                 c = Convert.ToString(res);
                 d = "";
+                minus = false;
             }
             else if (del == true)
             {
@@ -446,6 +461,7 @@ namespace Calculator
                 p = "";
                 c = Convert.ToString(res);
                 d = "";
+                umn = false;
             }
             else if (plus == false && minus == false && del == false && umn == false)
             {
@@ -483,6 +499,8 @@ namespace Calculator
                 p = "";
                 c = Convert.ToString(res);
                 d = "";
+                plus = false;
+
             }
             else if (minus == true)
             {
@@ -492,6 +510,7 @@ namespace Calculator
                 p = "";
                 c = Convert.ToString(res);
                 d = "";
+                minus = false;
             }
             else if (del == true)
             {
@@ -501,6 +520,7 @@ namespace Calculator
                 p = "";
                 c = Convert.ToString(res);
                 d = "";
+                del = false;
             }
             else if (umn == true)
             {
@@ -510,6 +530,7 @@ namespace Calculator
                 p = "";
                 c = Convert.ToString(res);
                 d = "";
+                umn = false;
             }
             lblDisp.Text = Convert.ToString(res);
             del = false;
